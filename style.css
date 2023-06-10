@@ -6,5 +6,15 @@ header {
       }
 /*styling the body's background*/  
 body {
-    background: blue;
+    background: #848482;
+}
+/*grid layout for css*/
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contact {
+  grid-column: 3;
 }
