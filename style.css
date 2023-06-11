@@ -1,20 +1,50 @@
-/*styling the header*/
-header {
-        background-color: #333;
-        color: #fff;
-        padding: 20px;
-      }
 /*styling the body's background*/  
 body {
-    background: #848482;
+    background: #ebebe3;
 }
 /*grid layout for css*/
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  height:100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+  "nav nav nav nav"
+  "main main main main"
+  "sidebar Portfolio Contact About"
+  "sidebar footer footer footer";
+  grid-gap: 0.2rem;
 }
 
-.contact {
-  grid-column: 3;
+nav{
+  background:#64fffa;
+  grid-area: nav;
+}
+main{
+  background:#67f8d6;
+  grid-area: main;
+}
+
+#sidebar {
+  background: #a7ffeb;
+  grid-area: sidebar;
+}
+
+#Portfolio {
+  background:#62ffba;
+  grid-area: Portfolio;
+}
+
+#Contact {
+  background: #1de9b6;
+  grid-area: Contact;
+}
+#About {
+  background: #18ffff;
+  grid-area: About;
+}
+
+footer{
+  background:#84ffff;
+  grid-area: footer;
 }
