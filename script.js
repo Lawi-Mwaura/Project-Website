@@ -1,3 +1,11 @@
-const h2 = document.createElement("h2");
-h2.textContent = "This content added by JavaScript";
-document.querySelector("body").appendChild(h2);
+const gridItems = document.querySelectorAll('.grid-item');
+
+gridItems.forEach((item) => {
+  item.addEventListener('mouseover', () => {
+    item.style.transform = 'translate(10px, 10px)';
+  });
+
+  item.addEventListener('mouseout', () => {
+    item.style.transform = 'none';
+  });
+});
