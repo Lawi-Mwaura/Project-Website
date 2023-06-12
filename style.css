@@ -1,6 +1,8 @@
 /*styling the body's background*/  
 body {
-    background: #ebebe3;
+    background: #0e0e09;
+    font-family: 'Teko', sans-serif;
+    font-size:x-large;
 }
 /*grid layout for css*/
 .grid-container {
@@ -12,42 +14,62 @@ body {
   "nav nav nav nav"
   "main main main main"
   "sidebar Portfolio Contact About"
-  "sidebar footer footer footer";
+  "sidebar Portfolio Contact About";
   grid-gap: 0.2rem;
 }
+/*Styling the grid-areas*/
 
 nav{
-  background:#64fffa;
+  background:#0fe27f;
   grid-area: nav;
 }
 main{
-  background:#67f8d6;
+  background:#0fe27f;
   grid-area: main;
 }
 
 #sidebar {
-  background: #a7ffeb;
+  background: #0fe27f;
   grid-area: sidebar;
 }
 
 #Portfolio {
-  background:#62ffba;
+  background:#0fe27f;
   grid-area: Portfolio;
 }
 
 #Contact {
-  background: #1de9b6;
+  background: #0fe27f;
   grid-area: Contact;
 }
 #About {
-  background: #18ffff;
+  background: #0fe27f;
   grid-area: About;
 }
 
 footer{
-  background:#84ffff;
+  background:#0fe27f;
   grid-area: footer;
 }
+
+/*Animation of grids*/
+@keyframes moveGrids {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.move-grid {
+  animation: moveGrids 1s linear infinite;
+}
+
+/*For mobile devices*/
 @media only screen and (max-width:480px) {
   .grid-container{
     grid-template-columns: 1fr;
@@ -58,7 +80,6 @@ footer{
     "sidebar"
     "Portfolio"
     "Contact"
-    "About"
-    "Footer";
+    "About";
   }
 }
